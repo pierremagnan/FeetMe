@@ -1,0 +1,27 @@
+<h1>Listing soles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Left</th>
+      <th>Activated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @soles.each do |sole| %>
+      <tr>
+        <td><%= sole.left %></td>
+        <td><%= sole.activated %></td>
+        <td><%= link_to 'Show', sole %></td>
+        <td><%= link_to 'Edit', edit_sole_path(sole) %></td>
+        <td><%= link_to 'Destroy', sole, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sole', new_sole_path %>

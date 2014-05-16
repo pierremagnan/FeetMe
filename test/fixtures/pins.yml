@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  left: false
+  coords: MyText
+  values: MyText
+
+two:
+  left: false
+  coords: MyText
+  values: MyText

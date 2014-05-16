@@ -1,0 +1,25 @@
+<%= form_for(@sole) do |f| %>
+  <% if @sole.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sole.errors.count, "error") %> prohibited this sole from being saved:</h2>
+
+      <ul>
+      <% @sole.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :left %><br>
+    <%= f.check_box :left %>
+  </div>
+  <div class="field">
+    <%= f.label :activated %><br>
+    <%= f.check_box :activated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
